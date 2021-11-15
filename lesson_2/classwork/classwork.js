@@ -30,13 +30,13 @@ console.log("***-- Задача про підїзди та квартири))--*
 document.write('<hr/><b> Задача про підїзди та квартири))</b><br/> ')
 
 let apartment = +prompt('Введить номер квартири');
-if (  apartment < 0  && apartment <= 20 ) {
+if (  apartment > 0  && apartment <= 20 ) {
     console.log(`Квартира знаходиться в першій парадній`)
     document.write(`Квартира знаходиться в першій парадній`)
-} else if (apartment <= 48  ) {
+} else if ( apartment >=  21  && apartment <= 48 ) {
     console.log(`Квартира знаходиться в другій парадній`)
     document.write(`Квартира знаходиться в другій парадній`)
-} else if (apartment <= 90) {
+} else if ( apartment >= 49  && apartment <= 90 ) {
     console.log(`Квартира знаходиться в третій парадній`)
     document.write(`Квартира знаходиться в третій парадній`)
 } else  {
