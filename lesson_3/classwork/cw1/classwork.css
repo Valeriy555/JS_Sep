@@ -1,0 +1,45 @@
+.simpson-box_2_1 div{
+    height: 320px;
+    background: aqua;
+    margin: 3px;
+    text-align: justify;
+}
+
+.picture{
+    width: 120px;
+    height: 209px;
+    float: right;
+    margin-top: 30px;
+}
+
+.simpson-box_2_2 div{
+    background: silver;
+    margin: 3px;
+}
+
+.simpson-box_2_2 h2{
+    text-align: center;
+    padding-top: 10px;
+}
+
+.simpson-box_2_2 p{
+    text-align: justify;
+    padding: 0 10px;
+}
+
+
+.product-card{
+    display: flex;
+    flex-wrap: wrap;
+}
+.product-card div {
+    width: 20%;
+    border: 2px solid orangered;
+    margin: 3px;
+    text-align:center;
+}
+
+.product-image{
+    width: 250px;
+    height: 250px;
+}
