@@ -1,0 +1,26 @@
+body {
+    padding-left: 30px;
+    background: saddlebrown;
+}
+
+.users-box {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.user-block {
+    width: 47%;
+    height: 290px;
+    margin: 5px;
+    background: blueviolet;
+    border: 2px solid black;
+    padding-left: 15px;
+    justify-content: center;
+
+}
+
+.address-block {
+    margin-top: 50px;
+
+}
