@@ -34,13 +34,13 @@
 
 class Users {
 
-    constructor(id, name, email, street, suite, city, zipcode,lat,lng, phone, website, nameCom,catchPhrase,bs) {
+    constructor(id, name, email, street, suite, city, zipcode,latitude,longitude, phone, website, nameCom,catchPhrase,bs) {
         this.id = id;
         this.name = name;
         this.email = email;
         this.address = {street:street,suite:suite,city:city,zipcode:zipcode,geo: {
-            lat: '-37.3159',
-            lng: '81.1496'
+            lat: latitude,
+            lng: longitude
         }};
         this.phone = phone;
         this.website = website;
@@ -58,5 +58,8 @@ let user = new Users(1, 'Bret', 'Sincere@april.biz',
     'Gwenborough', '92998-3874','-37.3159','81.1496',
     '1-770-736-8031 x56442', 'hildegard.org','Romaguera-Crona',
     'Multi-layered client-server neural-net','harness real-time e-markets')
+
+
+
 
 console.log(user)
