@@ -91,6 +91,7 @@ function going_home1() {
 
 
 async function goodDay() {
+    try{
     const day =await awakening1();
     await gymnastics1();
     await shower1();
@@ -101,6 +102,9 @@ async function goodDay() {
     await dinner1();
     await work1();
     await going_home1();
+    } catch (e) {
+        console.error('Проверь код, у тебя ошибка!!!')
+    }
 
 }
 

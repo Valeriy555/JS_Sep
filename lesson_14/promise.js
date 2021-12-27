@@ -89,6 +89,7 @@ function going_home() {
     })
 }
 
+
 awakening()
     .then(value => {
         return gymnastics();
@@ -116,6 +117,9 @@ awakening()
     })
     .then(value => {
         return going_home();
+    })
+    .catch(e  => {
+        console.error (e,'У тебя тут ошибочка!!!')
     })
 
 
