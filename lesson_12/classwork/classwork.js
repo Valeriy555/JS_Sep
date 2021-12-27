@@ -4,10 +4,11 @@
 
 let target = document.createElement('div');
 target.classList.add('target');
-target.style.display = 'flex';
-target.style.flexWrap = 'wrap';
-target.style.paddingLeft = '40px';
-
+// target.style.display = 'flex';
+// target.style.flexWrap = 'wrap';
+target.style.padding = '10px';
+target.style.border = '3px solid darkblue'
+target.style.background = 'yellow'
 document.body.append(target)
 
 fetch('https://jsonplaceholder.typicode.com/posts')
@@ -16,7 +17,7 @@ fetch('https://jsonplaceholder.typicode.com/posts')
 
         for (const post of posts) {
             let postDiv = document.createElement('div');
-            postDiv.style.width = '18%'
+            // postDiv.style.width = '18%'
             postDiv.style.border = '2px solid brown'
             postDiv.style.margin = '5px'
             postDiv.style.background = 'silver';
@@ -31,32 +32,35 @@ fetch('https://jsonplaceholder.typicode.com/posts')
 
 
             let btn = document.createElement('button');
-            // btn.style.
-
             btn.innerText = 'Post comments';
+
             btn.onclick = () => {
+
                 fetch(`https://jsonplaceholder.typicode.com/posts/${post.id}/comments`)
                     .then(value => value.json())
                     .then(comments => {
                         for (const comment of comments) {
-
                             if (post.id === comment.postId) {
                                 let divComments = document.createElement('div')
+                                divComments.style.background = 'olive'
+                                divComments.style.border = '2px solid brown'
+                                divComments.style.margin = '10px';
                                 divComments.innerHTML = `
                                         <h3>ID: ${comment.id}
                                         PostId: ${comment.postId}</h3>
                                         <h4>Name: ${comment.name}</h4>
                                         <p>Email: ${comment.email}</p>
-                                        <p>Body: ${comment.body}</p> <hr/>`;
+                                        <p>Body: ${comment.body}</p> `;
 
                                 postDiv.append(divComments)
                             }
+                            btn.disabled = true;
                         }
                     });
             };
             target.append(postDiv);
             postDiv.append(btn)
-            document.body.append(target)
+
         }
         console.log(posts);
     });

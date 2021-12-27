@@ -32,7 +32,3 @@ for (const user of users) {
     document.body.append(userDiv);
 }
 
-let favor = document.createElement('a');
-favor.style.fontSize = '20px';
-favor.innerHTML = `<a href = "favorites.html"> Favorites </a>`
-document.body.append(favor);
