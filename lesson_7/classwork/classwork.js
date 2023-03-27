@@ -18,6 +18,7 @@ function Cars(model, manufacturer, year, maxspeed, volume) {
         for (let key in this) {
             if (typeof this[key] !== 'function')
 
+
                 console.log(`${key} - ${this[key]}`)
         }
     };
@@ -155,6 +156,7 @@ let princ = new Prince('Shrek',52,36)
 let love = (arrCinderella,princ ) => {
     for (let i = 0; i < arrCinderella.length; i++) {
         let cell = arrCinderella[i];
+
         if (cell.footsize === princ.slipper){
             return `Принц нашел Золушку: ${cell.name}`
         }
